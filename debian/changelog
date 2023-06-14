@@ -1,5 +1,12 @@
-template-repository (1.0-1) unstable; urgency=medium
+ruby-os (0.9.6-1.1) unstable; urgency=medium
 
-  * Initial release
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Holger Levsen <holger@debian.org>  Tue, 05 Jan 2021 01:28:25 +0100
+
+ruby-os (0.9.6-1) unstable; urgency=medium
+
+  * Initial release (Closes: #804448)
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 30 Jan 2017 17:34:43 +0530

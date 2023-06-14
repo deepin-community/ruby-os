@@ -1,15 +1,27 @@
-Source: template-repository
-Section: unknown
+Source: ruby-os
+Section: ruby
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper (>= 9~),
+               gem2deb,
+               rake,
+               ruby-rspec
+Standards-Version: 3.9.8
+Vcs-Git: https://anonscm.debian.org/git/pkg-ruby-extras/ruby-os.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-ruby-extras/ruby-os.git
+Homepage: http://github.com/rdp/os
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: ruby-os
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Simple and easy way to know if you're on windows or not (reliably)
+ It also tells how many bits the OS is, etc.
+ .
+ The OS library allows for some useful and easy functions, like OS.windows?
+ (=> true or false) OS.bits ( => 32 or 64) etc"
